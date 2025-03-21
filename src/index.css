@@ -1,0 +1,153 @@
+/* src/index.css */
+@import "tailwindcss";
+/* Importar estilos del tema espacial */
+@import "./styles/spaceTheme.css";
+
+/* Estilos adicionales para el indicador de pasos */
+.step-indicator {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1.5rem;
+  position: relative;
+  flex: 1;
+  max-width: 160px;
+  z-index: 2;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  background-color: rgba(245, 247, 255, 0.1);
+  border: 1px solid rgba(245, 247, 255, 0.2);
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.step-title {
+  font-size: 0.875rem;
+  color: var(--color-space-gray);
+  text-align: center;
+}
+
+.step.active .step-number {
+  background: linear-gradient(135deg, var(--color-space-blue) 0%, var(--color-space-purple) 100%);
+  border-color: var(--color-space-blue);
+  box-shadow: 0 0 15px rgba(75, 121, 204, 0.5);
+  transform: scale(1.1);
+}
+
+.step.active .step-title {
+  color: var(--color-space-white);
+  font-weight: 600;
+}
+
+.step.completed .step-number {
+  background: linear-gradient(135deg, var(--color-space-teal) 0%, var(--color-space-blue) 100%);
+  border-color: var(--color-space-teal);
+}
+
+.step.completed .step-title {
+  color: var(--color-space-teal);
+}
+
+/* Líneas conectoras entre pasos */
+.step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 60%;
+  width: 80%;
+  height: 2px;
+  background-color: rgba(245, 247, 255, 0.1);
+  z-index: 1;
+}
+
+.step.completed:not(:last-child)::after,
+.step.active:not(:last-child)::after {
+  background-image: linear-gradient(90deg, var(--color-space-blue), var(--color-space-purple));
+}
+
+/* Estilo para el contenedor de la aplicación */
+.app-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  background-image: url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?q=80&w=2071');
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Animación de brillo para el paso activo */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(53, 216, 235, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(53, 216, 235, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(53, 216, 235, 0.5);
+  }
+}
+
+.step.active .step-number {
+  animation: glow 2s infinite;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .step {
+    padding: 0 1rem;
+  }
+  
+  .step-number {
+    width: 32px;
+    height: 32px;
+    font-size: 0.875rem;
+  }
+  
+  .step-title {
+    font-size: 0.75rem;
+  }
+  
+  .step:not(:last-child)::after {
+    top: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .step {
+    padding: 0 0.5rem;
+  }
+  
+  .step-number {
+    width: 28px;
+    height: 28px;
+    font-size: 0.75rem;
+  }
+  
+  .step-title {
+    font-size: 0.7rem;
+  }
+  
+  .step:not(:last-child)::after {
+    top: 14px;
+  }
+}
