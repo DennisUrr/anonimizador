@@ -260,3 +260,166 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(245, 247, 255, 0.3);
 }
+
+/* Colores de texto */
+.text-space-dark {
+  color: var(--color-space-dark);
+}
+
+.text-space-purple {
+  color: var(--color-space-purple);
+}
+
+.text-space-blue {
+  color: var(--color-space-blue);
+}
+
+.text-space-teal {
+  color: var(--color-space-teal);
+}
+
+.text-space-pink {
+  color: var(--color-space-pink);
+}
+
+.text-space-white {
+  color: var(--color-space-white);
+}
+
+.text-space-gray {
+  color: var(--color-space-gray);
+}
+
+/* Colores de fondo */
+.bg-space-dark {
+  background-color: var(--color-space-dark);
+}
+
+.bg-space-purple {
+  background-color: var(--color-space-purple);
+}
+
+.bg-space-blue {
+  background-color: var(--color-space-blue);
+}
+
+.bg-space-teal {
+  background-color: var(--color-space-teal);
+}
+
+.bg-space-pink {
+  background-color: var(--color-space-pink);
+}
+
+.bg-space-white {
+  background-color: var(--color-space-white);
+}
+
+.bg-space-gray {
+  background-color: var(--color-space-gray);
+}
+
+/* Colores de borde */
+.border-space-dark {
+  border-color: var(--color-space-dark);
+}
+
+.border-space-purple {
+  border-color: var(--color-space-purple);
+}
+
+.border-space-blue {
+  border-color: var(--color-space-blue);
+}
+
+.border-space-teal {
+  border-color: var(--color-space-teal);
+}
+
+.border-space-pink {
+  border-color: var(--color-space-pink);
+}
+
+.border-space-white {
+  border-color: var(--color-space-white);
+}
+
+.border-space-gray {
+  border-color: var(--color-space-gray);
+}
+
+/* Colores de fondo con gradiente */
+.bg-gradient-space-purple-blue {
+  background: linear-gradient(135deg, var(--color-space-purple) 0%, var(--color-space-blue) 100%);
+}
+
+.bg-gradient-space-blue-teal {
+  background: linear-gradient(135deg, var(--color-space-blue) 0%, var(--color-space-teal) 100%);
+}
+
+.bg-gradient-space-teal-blue {
+  background: linear-gradient(135deg, var(--color-space-teal) 0%, var(--color-space-blue) 100%);
+}
+
+.bg-gradient-space-purple-pink {
+  background: linear-gradient(135deg, var(--color-space-purple) 0%, var(--color-space-pink) 100%);
+}
+
+/* Colores de hover */
+.hover-text-space-teal:hover {
+  color: var(--color-space-teal);
+}
+
+.hover-text-space-purple:hover {
+  color: var(--color-space-purple);
+}
+
+.hover-text-space-blue:hover {
+  color: var(--color-space-blue);
+}
+
+.hover-text-space-pink:hover {
+  color: var(--color-space-pink);
+}
+
+.hover-text-space-white:hover {
+  color: var(--color-space-white);
+}
+
+/* Colores de texto con opacidad */
+.text-space-teal-75 {
+  color: rgba(53, 216, 235, 0.75);
+}
+
+.text-space-teal-50 {
+  color: rgba(53, 216, 235, 0.5);
+}
+
+.text-space-white-75 {
+  color: rgba(245, 247, 255, 0.75);
+}
+
+.text-space-white-50 {
+  color: rgba(245, 247, 255, 0.5);
+}
+
+/* Variaciones para diferentes colores base con hover blanco y subrayado */
+.text-space-teal-hover-white-underline {
+  color: var(--color-space-teal);
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.text-space-teal-hover-white-underline:hover {
+  color: var(--color-space-white);
+  text-decoration: underline;
+}
+
+.text-space-purple-hover-white-underline {
+  color: var(--color-space-purple);
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.text-space-purple-hover-white-underline:hover {
+  color: var(--color-space-white);
+  text-decoration: underline;
+}

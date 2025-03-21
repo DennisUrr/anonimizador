@@ -187,6 +187,23 @@ const StepByStepAnonymizer: React.FC = () => {
           {currentStep === Step.PREVIEW && "Revisa el resultado y descarga tu documento anonimizado"}
         </div>
       </div>
+    <footer className='flex flex-col items-center justify-center text-space-py-8 px-4 text-center mt-8'>
+      <p className="text-center text-space-teal text-md">
+        <span>📄</span> 
+        <a 
+          href="https://github.com/DennisUrr/anonimizador"
+          className="text-space-teal :hover-text-space-white"
+          target="_blank" 
+          rel="noopener noreferrer"
+          >
+            Código fuente disponible en GitHub
+        </a>
+      </p>
+      <p className="text-center text-space-gray text-xl mt-8">
+        <span>💡</span> 
+        NO GUARDAMOS NADA DE INFORMACIÓN DEL ARCHIVO DE SUBIDA
+      </p>
+    </footer>
     </div>
   );
 };
