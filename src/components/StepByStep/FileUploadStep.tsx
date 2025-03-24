@@ -63,7 +63,7 @@ const FileUploadStep: React.FC<FileUploadStepProps> = ({
         <input
           type="file"
           ref={fileInputRef}
-          accept=".docx,.txt,.csv"
+          accept=".docx,.txt,.csv,.pdf"
           onChange={handleFileUpload}
           className="hidden"
           disabled={isProcessing}
@@ -81,7 +81,7 @@ const FileUploadStep: React.FC<FileUploadStepProps> = ({
           <>
             <p className="mb-2">Arrastra y suelta tu archivo aquí o</p>
             <button type="button" className="space-btn-secondary">Seleccionar archivo</button>
-            <p className="mt-2 text-sm text-space-gray">Formatos soportados: .docx, .txt, .csv</p>
+            <p className="mt-2 text-sm text-space-gray">Formatos soportados: .docx, .txt, .csv, .pdf</p>
           </>
         )}
       </div>
